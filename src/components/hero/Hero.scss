@@ -1,4 +1,16 @@
 .Hero {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #1C57C9;
+    height: 100%;
+    z-index: -1;
+  }
 
   .container {
     display: flex;
@@ -54,11 +66,16 @@
 
 
 
-
 @media (min-width: 0px) {
   .Hero {
     padding-top: 3.5rem;
     padding-bottom: 7rem;
+
+    &::before {
+      width: 100%;
+      border-bottom-right-radius: 150px;
+    }
+    
     .container {
       text-align: center;
     }
@@ -74,16 +91,28 @@
 }
 
 @media (min-width: 768px) {
-
+  .Hero {
+    &::before {
+      border-bottom-right-radius: 250px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
   .Hero {
     padding-top: 1.5rem;
     padding-bottom: 3.5rem;
+
+    &::before {
+      display: block;
+      border-bottom-right-radius: 500px;
+      width: 70%;
+    }
+
     .container {
       text-align: left;
     }
+    
     &-left {
       flex: .5;
     }

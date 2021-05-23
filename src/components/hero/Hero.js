@@ -3,7 +3,7 @@ import './Hero.scss';
 
 function Hero() {
   return (
-    <div className="Hero">
+    <main className="Hero">
       <div className="container">
         <div className="Hero-left">
           <h1 className="Hero-left-title white">
@@ -39,7 +39,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
