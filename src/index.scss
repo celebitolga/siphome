@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background-color: #1C57C9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+
+.white {
+  color: white;
+}
+
+.green {
+  color: #3ACF6E;
+}
+
+.colorGreen {
+  color: #3ACF6E;
+  font-weight: 600;
+  transition: all 300ms;
+
+  &:hover {
+    color: #1848a7;
+  }
+}
+
+.colorBlack {
+  color: black;
+  font-weight: 600;
+  transition: all 300ms;
+
+  &:hover {
+    color: rgb(156, 156, 156);
+  }
+}
+
+.menuBtn {
+  text-align: center;
+  padding: 10px 18.5px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms;
+
+  &:hover {
+    background-color: #1848a7;
+    transition: all 300ms;
+  }
+}
+
+.closeBtn {
+  text-align: center;
+  padding: 10px 18.5px;
+  color: #FA4949;
+  background-color: transparent;
+  border: 1px solid #FA4949;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms;
+
+  &:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transition: all 300ms;
+  }
+}
+
+.greenBtn {
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: #3ACF6E;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms;
+
+  &:hover {
+    color: #3ACF6E;
+    background-color: white;
+    border: 1px solid #3ACF6E;
+  }
+}
+
+.whiteBtn {
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  color: #3ACF6E;
+  background-color: white;
+  border: 1px solid #3ACF6E;
+  cursor: pointer;
+  transition: all 500ms;
+
+  &:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #3ACF6E;
+  }
+}
+
+.transBtn {
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms;
+
+  &:hover {
+    background-color: rgba($color: #fff, $alpha: .08);
+  }
+}
+
+.mobileMenuActive {
+  font-weight: 600;
+  color: #1848a7;
+}
+
+.dekstopMenuActive {
+  font-weight: 600;
+  color: white;
+}
+
+
+
+
+
+@media (min-width: 0px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 1148px;
+  }
+}

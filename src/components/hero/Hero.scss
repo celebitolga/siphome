@@ -1,0 +1,100 @@
+.Hero {
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &-left {
+    flex: 1;
+    
+    &-title {
+      font-size: 3.5rem;
+    }
+
+    &-content {
+      font-size: 1.25rem;
+      margin: 2rem 0 4rem 0;
+    }
+
+    &-buttons{
+
+      &-button {
+        font-size: .9rem;
+
+        & + & {
+          margin-left: 4rem;
+        }
+      }
+    }
+  }
+
+  &-right {
+    display: none;
+
+    &-holder {
+      width: 100%;
+
+      &-hero1 {
+        max-width: 440px;
+        width: 100%;
+      }
+      &-hero2 {
+        z-index: 2;
+        position: absolute;
+        bottom: -20%;
+        right: 0;
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+@media (min-width: 0px) {
+  .Hero {
+    padding-top: 3.5rem;
+    padding-bottom: 7rem;
+    .container {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+  .Hero {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    .container {
+      text-align: left;
+    }
+    &-left {
+      flex: .5;
+    }
+
+    &-right {
+      display: block;
+      flex: .5;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
