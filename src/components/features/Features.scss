@@ -1,0 +1,198 @@
+.Features {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-comment {
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  &-content {
+
+    &-left {
+      margin: 3rem 0;
+    }
+
+    &-right {
+      
+      .meetSiphome {
+        margin-bottom: 1rem;
+
+        &-subtitle {
+          font-size: 1.25rem;
+          text-transform: uppercase;
+          word-spacing: 10px;
+          margin-bottom: 1.5rem;
+        }
+
+        &-title {
+          font-size: 2.7rem;
+          margin-bottom: 2rem;
+        }
+
+        &-text {
+          font-size: 1.25rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      .featuresCards {
+        display: flex;
+        margin-top: 2.5rem;
+        
+        &-item {
+          width: 50%;
+          padding: 1rem 0;
+          margin-top: 2rem;
+
+          &-logo {
+            margin-bottom: 2rem;
+          }
+
+          &-title {
+            font-size: 1.35rem;
+            margin-bottom: 1.25rem;
+          }
+
+          &-description {
+            line-height: 1.65rem;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media (min-width: 0px) {
+  .Features {
+    margin-top: 80px;
+    text-align: center;
+
+    &-content {
+
+      &-left {
+        img {
+          width: 100%;
+        }
+      }
+
+      &-right {
+
+        .featuresCards {
+          flex-direction: column;
+          // flex-wrap: wrap;
+          align-items: center;
+
+          &-item {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 576px) {
+  .Features {
+
+    &-content {
+
+      &-left {
+        img {
+          width: 70%;
+        }
+      }
+
+      &-right {
+
+        .featuresCards {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          &-item {
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+  .Features {
+    text-align: left;
+
+    &-comment {
+      margin-bottom: 5rem;
+    }
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-left {
+        flex: .45;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-right {
+        flex: .55;
+        
+        .meetSiphome {
+          margin-bottom: 0;
+
+          &-text {
+            line-height: 1.85rem;
+          }
+        }
+
+        .featuresCards {
+
+          &-item {
+            margin-top: 0;
+            margin-bottom: 3rem;
+            padding: 0;
+            align-self: flex-start;
+
+            &-title {
+              font-size: 1.1rem;
+            }
+
+            &-description {
+              font-size: .95rem;
+              line-height: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

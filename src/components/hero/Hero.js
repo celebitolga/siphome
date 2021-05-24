@@ -1,5 +1,5 @@
 import React from 'react'
-import './Hero.scss';
+import './Hero.scss'
 
 function Hero() {
   return (
@@ -7,7 +7,7 @@ function Hero() {
       <div className="container">
         <div className="Hero-left">
           <h1 className="Hero-left-title white">
-            Imagine your home smart enough{" "}
+            Imagine your home smart enough{' '}
             <span className="green">to take care</span> of itself.
           </h1>
           <p className="Hero-left-content white">
@@ -40,7 +40,7 @@ function Hero() {
         </div>
       </div>
     </main>
-  );
+  )
 }
 
 export default Hero
