@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import LazyLoadImage from '../lazyLoadImage/LazyLoadImage';
 import './Hero.scss'
 
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-
 function Hero() {
-
-  const [imageLoad, setImageLoad] = useState(false);
-
-  const handleImageLoad = () => {
-    setImageLoad(true);
-  }
-
   return (
     <main className="Hero">
       <div className="container">
@@ -37,28 +29,16 @@ function Hero() {
           <div className="Hero-right-holder">
             <LazyLoadImage
               className="Hero-right-holder-hero1"
+              src="images/hero1.png"
               alt="hero1"
-              src="images/hero1.png" // use normal <img> attributes as props
+              direction="right"
             />
             <LazyLoadImage
               className="Hero-right-holder-hero2"
-              alt="hero2"
-              src="images/hero2.png" // use normal <img> attributes as props
-            />
-            {/* <img
-              className="Hero-right-holder-hero1"
-              src="images/hero1.png"
-              alt="hero1"
-              onLoad={handleImageLoad}
-              style={imageLoad ? {} : { display: 'none' }}
-            />
-            <img
-              className="Hero-right-holder-hero2"
               src="images/hero2.png"
               alt="hero2"
-              onLoad={handleImageLoad}
-              style={imageLoad ? {} : { display: 'none' }}
-            /> */}
+              direction="right"
+            />
           </div>
         </div>
       </div>

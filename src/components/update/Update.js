@@ -5,6 +5,7 @@ import UpdateMonitor from '../../svg/UpdateMonitor'
 import UpdateMaintenance from '../../svg/UpdateMaintenance'
 import UpdateRepair from '../../svg/UpdateRepair'
 import UpdateReplace from '../../svg/UpdateReplace'
+import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
 
 const cardItems = [
   {
@@ -44,20 +45,23 @@ function Update() {
             It starts with an upgrade
           </h2>
           <div className="Update-left-images">
-            <img
+            <LazyLoadImage
               className="imageLeftTop"
               src="images/update1.png"
               alt="update1"
+              direction="left"
             />
-            <img
+            <LazyLoadImage
               className="imageRight"
               src="images/update2.png"
-              alt="update1"
+              alt="update2"
+              direction="left"
             />
-            <img
+            <LazyLoadImage
               className="imageLeftBottom"
               src="images/update3.png"
-              alt="update1"
+              alt="update3"
+              direction="left"
             />
           </div>
         </div>
@@ -68,7 +72,9 @@ function Update() {
                 <div className="updateCards-item-logo">
                   <cardItem.logo />
                 </div>
-                <h4 className="updateCards-item-title white">{cardItem.title}</h4>
+                <h4 className="updateCards-item-title white">
+                  {cardItem.title}
+                </h4>
                 <p className="updateCards-item-description white">
                   {cardItem.description}
                 </p>

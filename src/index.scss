@@ -12,7 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-color: #1C57C9;
+  overflow-x: hidden;
+
 }
 
 code {
@@ -161,6 +162,27 @@ a {
 .dekstopMenuActive {
   font-weight: 600;
   color: white;
+}
+
+
+.rightNotLoad {
+  transform: translateX(300px);
+  transition: all 1000ms;
+}
+
+.rightLoaded {
+  transform: translateX(0px);
+  transition: all 1000ms;
+}
+
+.leftNotLoad {
+  transform: translateX(-300px);
+  transition: all 1000ms;
+}
+
+.leftLoaded {
+  transform: translateX(0px);
+  transition: all 1000ms;
 }
 
 

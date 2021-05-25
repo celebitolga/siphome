@@ -5,6 +5,7 @@ import FeaturesDetection from '../../svg/FeaturesDetection'
 import FeaturesDiag from '../../svg/FeaturesDiag'
 import FeaturesPre from '../../svg/FeaturesPre'
 import FeaturesService from '../../svg/FeaturesService'
+import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
 
 const cardItems = [
   {
@@ -46,7 +47,12 @@ function Features() {
         </p>
         <div className="Features-content">
           <div className="Features-content-left">
-            <img src="images/illustration.png" alt="illustration" />
+            <LazyLoadImage
+              className="nooo"
+              src="images/illustration.png"
+              alt="illustration"
+              direction="left"
+            />
           </div>
           <div className="Features-content-right">
             <div className="meetSiphome">
