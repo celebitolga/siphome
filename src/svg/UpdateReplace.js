@@ -32,9 +32,6 @@ function UpdateReplace() {
           fill="white"
         />
       </mask>
-      <g mask="url(#mask0)">
-        <rect x="12.5" y="12" width="36" height="36" fill="#2053D1" />
-      </g>
     </svg>
   )
 }

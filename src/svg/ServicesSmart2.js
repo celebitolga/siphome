@@ -32,9 +32,6 @@ function ServicesSmart2() {
           fill="white"
         />
       </mask>
-      <g mask="url(#mask0)">
-        <rect x="9.5" y="10.4399" width="36" height="36" fill="#D39100" />
-      </g>
     </svg>
   )
 }

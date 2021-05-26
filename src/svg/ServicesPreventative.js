@@ -32,9 +32,6 @@ function ServicesPreventative() {
           fill="white"
         />
       </mask>
-      <g mask="url(#mask0)">
-        <rect x="9.5" y="10" width="36" height="36" fill="#D12940" />
-      </g>
     </svg>
   )
 }
