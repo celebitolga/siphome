@@ -53,19 +53,19 @@ function Update() {
           <div className="Update-left-images">
             <LazyLoadImage
               className="imageLeftTop"
-              src="images/update1.png"
+              src="images/update1.webp"
               alt="update1"
               direction="left"
             />
             <LazyLoadImage
               className="imageRight"
-              src="images/update2.png"
+              src="images/update2.webp"
               alt="update2"
               direction="left"
             />
             <LazyLoadImage
               className="imageLeftBottom"
-              src="images/update3.png"
+              src="images/update3.webp"
               alt="update3"
               direction="left"
             />

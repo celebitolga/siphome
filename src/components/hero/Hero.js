@@ -29,13 +29,13 @@ function Hero() {
           <div className="Hero-right-holder">
             <LazyLoadImage
               className="Hero-right-holder-hero1"
-              src="images/hero1.png"
+              src="images/hero1.webp"
               alt="hero1"
               direction="right"
             />
             <LazyLoadImage
               className="Hero-right-holder-hero2"
-              src="images/hero2.png"
+              src="images/hero2.webp"
               alt="hero2"
               direction="right"
             />

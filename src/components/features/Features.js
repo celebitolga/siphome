@@ -54,7 +54,7 @@ function Features() {
           <div className="Features-content-left">
             <LazyLoadImage
               className="nooo"
-              src="images/illustration.png"
+              src="images/illustration.webp"
               alt="illustration"
               direction="left"
             />

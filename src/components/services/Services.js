@@ -64,7 +64,7 @@ function Services() {
         <div className="Services-imageHolder">
           <LazyLoadImage
             className="Services-imageHolder-image"
-            src="images/Services1.png"
+            src="images/Services1.webp"
             alt="Services1"
             direction="left"
           />
