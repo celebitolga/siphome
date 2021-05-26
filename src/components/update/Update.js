@@ -1,33 +1,29 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import './Update.scss'
 
-import UpdateMonitor from '../../svg/UpdateMonitor'
-import UpdateMaintenance from '../../svg/UpdateMaintenance'
-import UpdateRepair from '../../svg/UpdateRepair'
-import UpdateReplace from '../../svg/UpdateReplace'
 import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
 
 const cardItems = [
   {
-    logo: UpdateMonitor,
+    logo: 'UpdateMonitor',
     title: 'Monitor',
     description:
       'Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.'
   },
   {
-    logo: UpdateMaintenance,
+    logo: 'UpdateMaintenance',
     title: 'Maintenance',
     description:
       'Siphome helps you maintain your home. The HomeHealth Record ensures you have the right information at the right time, and if you aren’t able to do the maintenance yourself, we can connect you to a service pro to help.'
   },
   {
-    logo: UpdateRepair,
+    logo: 'UpdateRepair',
     title: 'Repair',
     description:
       'Siphome empowers you with smart notifications so you can make repairs before they become problems. Notifications provide diagnostics and recommended next actions so you know what to do and have the same information as your service pro.'
   },
   {
-    logo: UpdateReplace,
+    logo: 'UpdateReplace',
     title: 'Replace​',
     description:
       'Improve your home over time. Build your next-gen smart home with Siphome’s advice along the way.'
@@ -36,6 +32,16 @@ const cardItems = [
 
 
 function Update() {
+  let array = []
+
+  cardItems.forEach((item) => {
+    array.push({
+      logo: lazy(() => import('./../../svg/' + item.logo + '.js')),
+      title: item.title,
+      description: item.description
+    })
+  })
+
   return (
     <section className="Update">
       <div className="container">
@@ -67,16 +73,16 @@ function Update() {
         </div>
         <div className="Update-right">
           <div className="updateCards">
-            {cardItems.map((cardItem) => (
-              <div className="updateCards-item">
+            {array.map((arr, index) => (
+              <div className="updateCards-item" key={'update-item' + index}>
                 <div className="updateCards-item-logo">
-                  <cardItem.logo />
+                  <Suspense fallback={<div>...</div>}>
+                    <arr.logo />
+                  </Suspense>
                 </div>
-                <h4 className="updateCards-item-title white">
-                  {cardItem.title}
-                </h4>
+                <h4 className="updateCards-item-title white">{arr.title}</h4>
                 <p className="updateCards-item-description white">
-                  {cardItem.description}
+                  {arr.description}
                 </p>
               </div>
             ))}

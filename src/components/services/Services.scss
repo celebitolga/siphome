@@ -1,0 +1,100 @@
+.Services {
+  background-image: linear-gradient(white, #ECF0F7);
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-subtitle {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  &-title {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+  }
+
+  &-imageHolder {
+    margin-bottom: 2rem;
+    
+    &-image {
+      width: 90%;
+    }
+  }
+
+  &-slider {
+    width: 100%;
+    margin-top: 5rem;
+  }
+
+  &-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      padding: 1rem;
+      margin: 1rem;
+      background-color: white;
+
+      &-logo {
+        margin-right: 1rem;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #262B36;
+      }
+
+    }
+  }
+}
+
+
+
+@media (min-width: 0px) {
+
+}
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

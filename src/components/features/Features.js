@@ -1,33 +1,29 @@
-import React from 'react'
+import React,{lazy, Suspense} from 'react'
 import './Features.scss'
 
-import FeaturesDetection from '../../svg/FeaturesDetection'
-import FeaturesDiag from '../../svg/FeaturesDiag'
-import FeaturesPre from '../../svg/FeaturesPre'
-import FeaturesService from '../../svg/FeaturesService'
 import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
 
 const cardItems = [
   {
-    logo: FeaturesDetection,
+    logo: 'FeaturesDetection',
     title: 'Automatic Threat Detection',
     description:
       'Siphome reacts the moment your equipment fails, alerting you to the problem.'
   },
   {
-    logo: FeaturesDiag,
+    logo: 'FeaturesDiag',
     title: 'Smart Diagnostics',
     description:
       'See exactly what is malfunctioning and compare your maintenance options on the same screen.'
   },
   {
-    logo: FeaturesPre,
+    logo: 'FeaturesPre',
     title: 'Disaster Prevention',
     description:
       'Predictive analytics lets you see what needs maintenance before it fails.'
   },
   {
-    logo: FeaturesService,
+    logo: 'FeaturesService',
     title: '24/7 Service​',
     description:
       'Siphome monitors your critical systems 24/7 so you can enjoy peace of mind.'
@@ -35,6 +31,15 @@ const cardItems = [
 ]
 
 function Features() {
+  let array = []
+
+  cardItems.forEach((item) => {
+    array.push({
+      logo: lazy(() => import('./../../svg/' + item.logo + '.js')),
+      title: item.title,
+      description: item.description
+    })
+  })
 
   return (
     <section className="Features">
@@ -65,14 +70,16 @@ function Features() {
               </p>
             </div>
             <div className="featuresCards">
-              {cardItems.map((cardItem) => (
-                <div className="featuresCards-item">
+              {array.map((arr, index) => (
+                <div className="featuresCards-item" key={'features-item' + index}>
                   <div className="featuresCards-item-logo">
-                    <cardItem.logo />
+                    <Suspense fallback={<div>...</div>}>
+                      <arr.logo />
+                    </Suspense>
                   </div>
-                  <h4 className="featuresCards-item-title">{cardItem.title}</h4>
+                  <h4 className="featuresCards-item-title">{arr.title}</h4>
                   <p className="featuresCards-item-description gray">
-                    {cardItem.description}
+                    {arr.description}
                   </p>
                 </div>
               ))}

@@ -1,0 +1,31 @@
+.Slider {
+  cursor: grab;
+
+  &-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    &-logo {
+      margin-right: 2rem;
+    }
+
+    &-title {
+      font-weight: 700 !important;
+      font-size: 1.4rem;
+      color: #262B36;
+    }
+  }
+}
+
+.carousel-dots li.carousel-dots-active button:before {
+  color: #1C57C9 !important;
+  opacity: 1 !important;
+}
