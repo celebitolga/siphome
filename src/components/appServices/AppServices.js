@@ -36,7 +36,7 @@ function AppServices() {
     } else {
       setMobileSlider(false)
     }
-    window.addEventListener('resize', windowResize)
+    window.addEventListener('resize', windowResize, { passive: true })
 
     return () => {
       window.removeEventListener('resize', windowResize)

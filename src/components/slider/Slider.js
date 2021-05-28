@@ -29,7 +29,7 @@ function Slider({ items }) {
     } else {
       setSlidesToShow(2)
     }
-    window.addEventListener('resize', windowResize)
+    window.addEventListener('resize', windowResize, { passive: true })
     setLoading(true)
 
     return () => {
