@@ -1,12 +1,18 @@
-import React from 'react'
-import LazyLoadImage from '../lazyLoadImage/LazyLoadImage';
+import React, { useState } from 'react'
+import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
 import './AppHero.scss'
 
 function AppHero() {
+  const [animation, setAnimation] = useState(false)
+
+  const handleLoad = () => {
+    setAnimation(true)
+  }
+
   return (
     <section className="Hero">
       <div className="container">
-        <div className="Hero-left">
+        <div className={`Hero-left ${animation ? 'leftCome' : 'leftGo'}`}>
           <h1 className="Hero-left-title white">
             Imagine your home smart enough{' '}
             <span className="green">to take care</span> of itself.
@@ -32,12 +38,14 @@ function AppHero() {
               src="images/hero1.webp"
               alt="hero1"
               direction="right"
+              handleLoad={handleLoad}
             />
             <LazyLoadImage
               className="Hero-right-holder-hero2"
               src="images/hero2.webp"
               alt="hero2"
               direction="right"
+              handleLoad={handleLoad}
             />
           </div>
         </div>

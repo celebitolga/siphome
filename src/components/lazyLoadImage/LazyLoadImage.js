@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
-function LazyLoadImage({ className, src, alt, direction }) {
-
+function LazyLoadImage({ className, src, alt, direction, handleLoad }) {
   const [imageLoad, setImageLoad] = useState(false)
 
   const handleImageLoad = () => {
+    if (handleLoad) {
+      handleLoad()
+    }
     setImageLoad(true)
   }
 

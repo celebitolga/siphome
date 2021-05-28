@@ -177,6 +177,31 @@ a {
   color: white;
 }
 
+// ! Animations
+
+.leftGo {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 1000ms;
+}
+
+.leftCome {
+  opacity: 1;
+  transform: translateX(auto);
+  transition: all 1000ms;
+}
+
+.rightGo {
+  opacity: 0;
+  transform: translateX(300px);
+  transition: all 1000ms;
+}
+
+.rightCome {
+  opacity: 1;
+  transform: translateX(auto);
+  transition: all 1000ms;
+}
 
 .rightNotLoad {
   transform: translateX(300px);
@@ -197,7 +222,7 @@ a {
   transform: translateX(0px);
   transition: all 1000ms;
 }
-
+//! Animations //
 
 
 
