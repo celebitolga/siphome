@@ -40,7 +40,6 @@ a {
 }
 
 .container {
-  width: calc(100% - 60px);
   margin: 0 auto;
 }
 
@@ -231,11 +230,19 @@ a {
   html {
     font-size: 12px;
   }
+
+  .container {
+    width: calc(100% - 30px);
+  }
 }
 
 @media (min-width: 320px) {
   html {
     font-size: 12px;
+  }
+
+  .container {
+    width: calc(100% - 60px);
   }
 }
 

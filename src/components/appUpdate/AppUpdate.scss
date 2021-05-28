@@ -5,13 +5,10 @@
 
   .container {
     display: flex;
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
   }
 
   &-left {
-    width: calc(100% - 60px);
+    flex: .5;
 
     &-subtitle {
       font-size: 1.25rem;
@@ -28,7 +25,6 @@
     }
 
     &-images {
-      position: relative;
 
       .imageLeftTop {
         position: absolute;
@@ -48,8 +44,7 @@
   }
 
   &-right {
-    padding: 0 0 15rem;
-    position: relative;
+    flex: .5;
 
     &::before {
       display: block;
@@ -57,6 +52,7 @@
       position: absolute;
       background-color: #1C57C9;
       width: 100%;
+      height: 100%;
       z-index: -1;
     }
 
@@ -109,12 +105,13 @@
       }
 
       &-images {
+        position: relative;
         height: 380px;
 
         .imageLeftTop {
           width: 45%;
-          left: -10%;
-          top: -10%;
+          left: 0;
+          top: 0;
         }
 
         .imageRight {
@@ -131,16 +128,16 @@
     }
 
     &-right {
+      padding: 0 0 10rem;
 
       &::before {
-        top: -60px;
-        height: 100%;
-        border-bottom-left-radius: 150px;
+        left: 0;
       }
 
       .updateCards {
         flex-direction: column;
         align-items: center;
+        padding: 0;
 
         &-item {
           width: 100%;
@@ -153,9 +150,9 @@
 @media (min-width: 320px) {
   .Update {
     &-left {
-
+      
       &-images {
-        // height: 380px;
+        height: 380px;
 
         .imageLeftTop {
           width: 55%;
@@ -175,31 +172,41 @@
         }
       }
     }
+    &-right {
+
+      &::before {
+        top: 380px;
+        height: calc(100% - 380px);
+        border-bottom-left-radius: 150px;
+      }
+    }
   }
 }
 
 @media (min-width: 576px) {
   .Update {
     &-left {
-
+      width: 100%;
+      
       &-images {
-        height: 580px;
+        height: 400px;
+        width: 100%;
 
         .imageLeftTop {
-          width: 45%;
+          width: 40%;
           left: 0;
-          top: 0;
         }
 
         .imageRight {
-          width: 50%;
+          width: 55%;
           right: 0;
+          top: 40%;
         }
 
         .imageLeftBottom {
           width: 55%;
-          left: 0;
           bottom: 0;
+          left: 0;
         }
       }
     }
@@ -207,8 +214,8 @@
     &-right {
 
       &::before {
-        top: -150px;
-        height: 110%;
+        top: 500px;
+        height: calc(100% - 500px);
         border-bottom-left-radius: 150px;
       }
 
@@ -216,6 +223,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0;
 
         &-item {
           width: 45%;
@@ -234,13 +242,21 @@
       }
     }
 
-    &-right {}
+    &-right {
+      
+      &::before {
+        top: 680px;
+        height: calc(100% - 680px);
+        border-bottom-left-radius: 200px;
+      }
+    }
   }
 }
 
 @media (min-width: 992px) {
   .Update {
     text-align: left;
+    position: relative;
 
     .container {
       flex-direction: row;
@@ -259,31 +275,39 @@
 
       &-images {
         height: 580px;
+        position: static;
 
         .imageLeftTop {
-          width: 50%;
+          width: 20%;
           max-width: 300px;
           left: 0;
-          top: -8%;
+          top: 200px;
         }
 
         .imageRight {
-          width: 50%;
+          width: 40%;
           max-width: 400px;
-          right: -5%;
+          right: calc(50% - 30px);
+          top: 50%;
         }
 
         .imageLeftBottom {
-          width: 50%;
+          width: 30%;
           max-width: 500px;
-          left: 0;
-          bottom: -8%;
+          bottom: 50px;
         }
       }
     }
 
     &-right {
       flex: .5;
+
+      &::before {
+        left: 50%;
+        top: 0;
+        height: 100%;
+        border-bottom-left-radius: 250px;
+      }
 
       .updateCards {
         flex-direction: column;
@@ -320,5 +344,27 @@
 }
 
 @media (min-width: 1200px) {
+  
+}
 
+
+@media (min-width: 1925px) {
+  .Update {
+
+    &-left {
+
+      &-images {
+
+        .imageLeftTop {
+          max-width: 300px;
+          left: 500px;
+        }
+
+        .imageLeftBottom {
+          max-width: 500px;
+          left: 500px;
+        }
+      }
+    }
+  }
 }
