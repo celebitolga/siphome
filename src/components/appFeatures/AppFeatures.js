@@ -1,9 +1,10 @@
-import React,{lazy, Suspense} from 'react'
-import './Features.scss'
+import React from 'react'
+import './AppFeatures.scss'
 
 import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
+import FeaturesCard from '../featuresCard/FeaturesCard'
 
-const cardItems = [
+const cardData = [
   {
     logo: 'FeaturesDetection',
     title: 'Automatic Threat Detection',
@@ -30,17 +31,7 @@ const cardItems = [
   }
 ]
 
-function Features() {
-  let array = []
-
-  cardItems.forEach((item) => {
-    array.push({
-      logo: lazy(() => import('./../../svg/' + item.logo + '.js')),
-      title: item.title,
-      description: item.description
-    })
-  })
-
+function AppFeatures() {
   return (
     <section className="Features">
       <div className="container">
@@ -70,17 +61,11 @@ function Features() {
               </p>
             </div>
             <div className="featuresCards">
-              {array.map((arr, index) => (
-                <div className="featuresCards-item" key={'features-item' + index}>
-                  <div className="featuresCards-item-logo">
-                    <Suspense fallback={<div>...</div>}>
-                      <arr.logo />
-                    </Suspense>
-                  </div>
-                  <h4 className="featuresCards-item-title">{arr.title}</h4>
-                  <p className="featuresCards-item-description gray">
-                    {arr.description}
-                  </p>
+              {cardData.map((cardItem, index) => (
+                <div className="featuresCards-item" key={'features-cardItem-' + index}>
+
+                  <FeaturesCard cardItem={cardItem} />
+                  
                 </div>
               ))}
             </div>
@@ -91,4 +76,4 @@ function Features() {
   )
 }
 
-export default Features
+export default AppFeatures

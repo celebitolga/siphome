@@ -47,8 +47,8 @@ function Slider({ items }) {
           autoplay={true}
           autoplaySpeed={2000}
         >
-          {array.map((arr) => (
-            <div className="Slider-item">
+          {array.map((arr, index) => (
+            <div className="Slider-item" key={'slider-cardItem-' + index}>
               <div className="Slider-item-logo">
                 <Suspense fallback={<div>...</div>}>
                   <arr.logo />

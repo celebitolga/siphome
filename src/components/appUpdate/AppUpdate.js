@@ -1,9 +1,10 @@
-import React, { lazy, Suspense } from 'react'
-import './Update.scss'
+import React from 'react'
+import './AppUpdate.scss'
 
 import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
+import UpdateCard from '../updateCard/UpdateCard'
 
-const cardItems = [
+const cardData = [
   {
     logo: 'UpdateMonitor',
     title: 'Monitor',
@@ -31,17 +32,7 @@ const cardItems = [
 ]
 
 
-function Update() {
-  let array = []
-
-  cardItems.forEach((item) => {
-    array.push({
-      logo: lazy(() => import('./../../svg/' + item.logo + '.js')),
-      title: item.title,
-      description: item.description
-    })
-  })
-
+function AppUpdate() {
   return (
     <section className="Update">
       <div className="container">
@@ -73,17 +64,9 @@ function Update() {
         </div>
         <div className="Update-right">
           <div className="updateCards">
-            {array.map((arr, index) => (
-              <div className="updateCards-item" key={'update-item' + index}>
-                <div className="updateCards-item-logo">
-                  <Suspense fallback={<div>...</div>}>
-                    <arr.logo />
-                  </Suspense>
-                </div>
-                <h4 className="updateCards-item-title white">{arr.title}</h4>
-                <p className="updateCards-item-description white">
-                  {arr.description}
-                </p>
+            {cardData.map((cardItem, index) => (
+              <div className="updateCards-item" key={'update-cardItem-' + index}>
+                <UpdateCard cardItem={cardItem} />
               </div>
             ))}
           </div>
@@ -93,4 +76,4 @@ function Update() {
   )
 }
 
-export default Update
+export default AppUpdate

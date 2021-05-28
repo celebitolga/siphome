@@ -1,10 +1,10 @@
 import React from 'react'
 import LazyLoadImage from '../lazyLoadImage/LazyLoadImage';
-import './Hero.scss'
+import './AppHero.scss'
 
-function Hero() {
+function AppHero() {
   return (
-    <main className="Hero">
+    <section className="Hero">
       <div className="container">
         <div className="Hero-left">
           <h1 className="Hero-left-title white">
@@ -42,8 +42,8 @@ function Hero() {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   )
 }
 
-export default Hero
+export default AppHero

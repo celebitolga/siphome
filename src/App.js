@@ -1,18 +1,20 @@
 import './App.scss'
-import Features from './components/features/Features'
-import Header from './components/header/Header'
-import Hero from './components/hero/Hero'
-import Services from './components/services/Services'
-import Update from './components/update/Update'
+import AppHeader from './components/appHeader/AppHeader'
+import AppHero from './components/appHero/AppHero'
+import AppFeatures from './components/appFeatures/AppFeatures'
+import AppUpdate from './components/appUpdate/AppUpdate'
+import AppServices from './components/appServices/AppServices'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Features />
-      <Update />
-      <Services />
+      <AppHeader />
+      <main>
+        <AppHero />
+        <AppFeatures />
+        <AppUpdate />
+        <AppServices />
+      </main>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import "./Header.scss";
+import './AppHeader.scss'
 
-import Logo from "./../../svg/Logo";
-import Logotext from "./../../svg/Logotext";
+import Logo from "../../svg/Logo";
+import Logotext from "../../svg/Logotext";
 
-function Header() {
+function AppHeader() {
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false);
 
   const handleMobileMenuClick = () => {
@@ -26,6 +26,7 @@ function Header() {
         <div className="Header-mobileMenu">
           <div
             className="Header-mobileMenu-dropdown"
+            // eslint-disable-next-line react/jsx-no-duplicate-props
             className={
               mobileMenuClicked
                 ? 'Header-mobileMenu-dropdown dropdown-open'
@@ -45,24 +46,24 @@ function Header() {
             </div>
 
             <nav className="Header-mobileMenu-dropdown-center">
-              <a
+              <span
                 target="#"
                 className="Header-mobileMenu-dropdown-center-item mobileMenuActive"
               >
                 Home
-              </a>
-              <a target="#" className="Header-mobileMenu-dropdown-center-item">
+              </span>
+              <span target="#" className="Header-mobileMenu-dropdown-center-item">
                 Features
-              </a>
-              <a target="#" className="Header-mobileMenu-dropdown-center-item">
+              </span>
+              <span target="#" className="Header-mobileMenu-dropdown-center-item">
                 Services
-              </a>
-              <a target="#" className="Header-mobileMenu-dropdown-center-item">
+              </span>
+              <span target="#" className="Header-mobileMenu-dropdown-center-item">
                 Contact
-              </a>
-              <a target="#" className="Header-mobileMenu-dropdown-center-item">
+              </span>
+              <span target="#" className="Header-mobileMenu-dropdown-center-item">
                 FAQ
-              </a>
+              </span>
             </nav>
 
             <div className="Header-mobileMenu-dropdown-down">
@@ -85,32 +86,32 @@ function Header() {
 
         <nav className="Header-dekstopMenu">
           <div className="Header-dekstopMenu-left">
-            <a
+            <span
               href="#"
               className="Header-dekstopMenu-left-item dekstopMenuActive"
             >
               Home
-            </a>
-            <a href="#" className="Header-dekstopMenu-left-item">
+            </span>
+            <span href="#" className="Header-dekstopMenu-left-item">
               Features
-            </a>
-            <a href="#" className="Header-dekstopMenu-left-item">
+            </span>
+            <span href="#" className="Header-dekstopMenu-left-item">
               Services
-            </a>
-            <a href="#" className="Header-dekstopMenu-left-item">
+            </span>
+            <span href="#" className="Header-dekstopMenu-left-item">
               Contact
-            </a>
-            <a href="#" className="Header-dekstopMenu-left-item">
+            </span>
+            <span href="#" className="Header-dekstopMenu-left-item">
               FAQ
-            </a>
+            </span>
           </div>
           <div className="Header-dekstopMenu-right">
-            <a href="#" className="Header-dekstopMenu-right-item colorBlack">
+            <span href="#" className="Header-dekstopMenu-right-item colorBlack">
               Sign In
-            </a>
-            <a href="#" className="Header-dekstopMenu-right-item colorGreen">
+            </span>
+            <span href="#" className="Header-dekstopMenu-right-item colorGreen">
               Get Started
-            </a>
+            </span>
           </div>
         </nav>
       </div>
@@ -118,4 +119,4 @@ function Header() {
   )
 }
 
-export default Header
+export default AppHeader

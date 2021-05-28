@@ -1,11 +1,12 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react'
-import './Services.scss'
+import React, { useState, useEffect } from 'react'
+import './AppServices.scss'
 
 import LazyLoadImage from '../lazyLoadImage/LazyLoadImage'
 import Slider from '../slider/Slider'
+import ServicesCard from '../servicesCard/ServicesCard'
 
 
-const items = [
+const cardData = [
   { logo: 'ServicesMobile', title: 'Mobile Command Management' },
   { logo: 'ServicesEquipment', title: 'Equipment Optimizer' },
   { logo: 'ServicesLifecycle', title: 'Lifecycle Prediction' },
@@ -18,16 +19,8 @@ const items = [
 ]
 
 
-function Services() {
+function AppServices() {
   const [mobileSlider, setMobileSlider] = useState(false);
-  let array = []
-
-  items.forEach((item) => {
-    array.push({
-      logo: lazy(() => import('./../../svg/' + item.logo + '.js')),
-      title: item.title
-    })
-  })
 
   const windowResize = (e) => {
     if (e.currentTarget.innerWidth < 992) {
@@ -71,18 +64,13 @@ function Services() {
         </div>
         {mobileSlider ? (
           <div className="Services-slider">
-            <Slider items={items} />
+            <Slider items={cardData} />
           </div>
         ) : (
           <div className="Services-cards">
-            {array.map((arr, index) => (
-              <div className="Services-cards-item" key={'services-item' + index}>
-                <div className="Services-cards-item-logo">
-                  <Suspense fallback={<div>...</div>}>
-                    <arr.logo />
-                  </Suspense>
-                </div>
-                <h2 className="Services-cards-item-title"> {arr.title} </h2>
+            {cardData.map((cardItem, index) => (
+              <div className="Services-cards-item" key={'services-cardItem-' + index}>
+                <ServicesCard cardItem={cardItem} />
               </div>
             ))}
           </div>
@@ -92,4 +80,4 @@ function Services() {
   )
 }
 
-export default Services
+export default AppServices
