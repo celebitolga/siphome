@@ -71,12 +71,11 @@
 
 @media (min-width: 0px) {
   .Hero {
-    padding-top: 3.5rem;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
 
     &::before {
       width: 100%;
-      border-bottom-right-radius: 150px;
+      border-bottom-right-radius: 100px;
     }
     
     .container {
@@ -93,7 +92,15 @@
 }
 
 @media (min-width: 320px) {
+  .Hero {
+    padding-top: 3.5rem;
+    padding-bottom: 7rem;
 
+    &::before {
+      width: 100%;
+      border-bottom-right-radius: 150px;
+    }
+  }
 }
 
 @media (min-width: 576px) {
