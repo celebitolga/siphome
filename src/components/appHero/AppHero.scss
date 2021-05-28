@@ -15,7 +15,6 @@
   .container {
     display: flex;
     justify-content: space-between;
-    position: relative;
   }
 
   &-left {
@@ -48,15 +47,19 @@
 
     &-holder {
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: 3rem;
+      margin-right: auto;
 
       &-hero1 {
-        max-width: 440px;
         width: 100%;
       }
       &-hero2 {
         z-index: 2;
         position: absolute;
-        bottom: -20%;
+        bottom: -5%;
         right: 0;
         max-width: 400px;
         width: 100%;
@@ -122,6 +125,7 @@
     
     &-left {
       flex: .5;
+      margin-right: 4rem;
 
       &-title {
         line-height: 5rem;
@@ -131,10 +135,31 @@
     &-right {
       display: block;
       flex: .5;
+
+      &-holder {
+
+        &-hero2 {
+          max-width: 350px;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 1200px) {
+  .Hero {
+    &::before {
+      border-bottom-right-radius: 250px;
+    }
 
+    &-right {
+
+      &-holder {
+
+        &-hero2 {
+          max-width: 450px;
+        }
+      }
+    }
+  }
 }
